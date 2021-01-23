@@ -1,0 +1,22 @@
+package testselenium1;
+
+import org.testng.annotations.*;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+public class Test2 {
+	  @Test
+	  public void f() {
+		  WebDriver driver;
+		  System.setProperty("webdriver.chrome.driver","D:\\ME\\devops\\Testing\\chromedriver.exe");
+		  driver=new ChromeDriver();
+		  driver.get("https://manipal.edu/mu.html");
+		  driver.findElement(By.className("mobile-magnifier")).click();
+		  driver.findElement(By.id("global-search-text-mob")).sendKeys("msis");
+		  driver.findElement(By.id("global-search-text-mob")).sendKeys(Keys.RETURN);
+		  
+	  }
+}
